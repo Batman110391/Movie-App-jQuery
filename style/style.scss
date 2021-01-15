@@ -1,0 +1,208 @@
+@import "film_page";
+@import "film_page_search";
+@import "actor_page";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo-gorillaz{
+    position: absolute;
+    top: 0;
+    left: 0;
+    img{
+        width: 60px;
+    }
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #272532;
+}
+.title{
+    background: #373B69;
+    border-radius: 5px;
+    color: #83CFDF;
+    padding: 9px;
+    h5{
+        text-align: center;
+        font-weight: 500;
+    }
+}
+
+.container-fluid{
+    background: #272532;
+    
+    #box-movie{
+        max-width: 975px;
+        margin: auto;
+    }
+}
+
+.app-container.home{
+    padding-top: 50px;
+}
+
+.app-container{
+    background: #272532;
+    border-radius: 5px;
+    padding: 0;
+
+    .search-movie{
+        text-align: center;
+        padding: 10px;
+        height: 60px;
+        input{
+            font-size: 20px;
+            width: 80%;
+            max-width: 416px;
+            height: 100%;
+            border-radius: 20px;
+            border: 1px solid #ffffff59;
+            background: transparent;
+            outline: none;
+            color: #ebe5e2b2;
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+    h6{
+        color: #83CFDF;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+    }
+
+    .genres-movie{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        border-bottom: 1px solid rgba(179, 175, 175, 0.486);
+        .see-all{
+            color: #ebe5e2b2;
+            cursor: pointer;
+            span{
+                margin-right: 7px;
+                font-size: 13px;
+            }
+            i{
+                &::before{
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .cards-container.card-container-search{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        cursor: default;
+        flex-wrap: wrap;
+    }
+
+    .cards-container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        cursor: default;
+        .card{
+            position: relative;
+            margin-right: 9px;
+            border-radius: 5px;
+            background: transparent;
+            width: 111px;
+            min-width: 111px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            &:hover{
+                border: 2px solid #83cedabb!important;
+                opacity: 80%;
+            }
+            &:hover .complete_title{
+                opacity: 100%;
+            }
+            .vote_average{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                padding-bottom: 1px;
+                i{
+                    margin-right: 5px;
+                    font-size: 11px;
+                }
+            }
+            .complete_title{
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 7px;
+                opacity: 1%;
+                width: 80px;
+                background-color: rgba(37, 36, 36, 0.979);
+                color: rgb(245, 245, 245);
+                transition: opacity .3s ease-in-out;
+            }
+            img{
+                height: 158px;
+                width: 107px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                object-fit: fill;
+            }
+            .card-body{
+                background: #373B69;
+                width: 107px;
+                color: white;
+                font-size: 12px;
+                text-align: center;
+                display: flex;
+                height: 60px;
+                flex-direction: column;
+                padding: 2px;
+                border-bottom-left-radius: 7px;
+                border-bottom-right-radius: 7px;
+                p{
+                    margin: 2px 0 17px 0;
+                }
+            }
+        }
+        .card-search{
+            margin: 0 5px 10px 5px;
+        }
+    }
+}
+
+
+.cards-container::-webkit-scrollbar {
+    display: block;
+    height: 8px;
+}
+ 
+.cards-container::-webkit-scrollbar-thumb {
+    background: #454546;
+    border-radius: 10px;
+}
+
+.cards-container::-webkit-scrollbar-track-piece:end {
+    margin-right: 10px;
+}
+
+.cards-container::-webkit-scrollbar-track-piece:start {
+    margin-left: 10px;
+}
+
+
+div#next {
+    color: white;
+    align-self: center;
+    margin-left: 40px;
+}
