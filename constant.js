@@ -1,4 +1,4 @@
-const KEY = "024c5dee9af18585c60e92fa104e3f8c";
+const KEY = "INSERT YOUR KEYS";
 const GENERIAPI = "https://api.themoviedb.org/3/genre/movie/list?api_key="+KEY+"&language=en-US"
 const IMGPATH = "http://image.tmdb.org/t/p/w500";
 const VIDEOPATH = "https://www.youtube.com/embed/";
